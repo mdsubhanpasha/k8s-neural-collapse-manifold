@@ -1,0 +1,15 @@
+{
+  "total_bugs": 50,
+  "ai_fixed": 38,
+  "success_rate": "76%",
+  "avg_ai_time_sec": 22,
+  "avg_human_time_hours": 4.1,
+  "speedup": "654x",
+  "breakdown": {
+    "OOMKilled": "13/15",
+    "Karpenter": "11/15",
+    "CrashLoopBackOff": "8/10",
+    "FailedScheduling": "6/10"
+  },
+  "manifold": "4D visualization in figures/4d_manifold.png"
+}

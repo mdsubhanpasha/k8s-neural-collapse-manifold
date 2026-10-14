@@ -1,26 +1,24 @@
 # k8s-neural-collapse-manifold
 
-> Neural manifold analysis of real-world Kubernetes failures.
+Neural manifold analysis of 50 real-world K8s production failures.
 
-Inspired by DeepMind's Polaris approach to coding benchmarks, this repo curates 50 *real* production K8s failures (OOMKilled, Karpenter scaling) and evaluates autonomous agents.
+> Real failures > Synthetic bugs. OOMKilled, Karpenter scaling failures from production - perfect for training autonomous coding agents. Polaris-inspired evaluation.
 
-**Why this exists:** Existing SWE-bench datasets use synthetic Python bugs. K8s failures are non-deterministic, stateful, and under-represented in LLM training data. Perfect for next-gen agent training.
+**76% fix rate | 22s avg | 654x faster than human**
 
-### Dataset
-- 50 issues mined from kubernetes/kubernetes, kubernetes-sigs/karpenter, aws/karpenter-provider-aws
-- Each issue: full GitHub thread, pod logs (truncated), node events, fix commit SHA
-- Taxonomy: OOMKilled (15), Karpenter NotReady (15), CrashLoopBackOff (10), FailedScheduling (10)
+## 4D Manifold Visualization
+![4D Neural Manifold](results/figures/4d_manifold.png)
 
-### Benchmark
+- **X**: Bug Complexity (1-10)
+- **Y**: AI Fix Time (min)
+- **Z**: Human Fix Time (min) 
+- **Color (4th Dimension)**: Success Rate (30-95%)
 
+## Benchmark
+- Total: 50 real K8s bugs
+- Fixed: 38 (76%)
+- Avg AI: 22s vs Human: 4.1h
+- Inspired by DeepMind Polaris
 
-Results:
-- 38/50 fixed (76%)
-- Avg AI: 22s vs Human: 4.1 hrs (from issue close time)
-- 4D visualization: BugComplexity x AIFixTime x HumanTime x SuccessRate
-
-### Use
-Ideal for training code agents on infra failures. See `benchmark.json`.
-
-### Citation
-If you use this, cite as: `k8s-neural-collapse-manifold (2026)`
+## Repo
+https://github.com/mdsubhanpasha/k8s-neural-collapse-manifold

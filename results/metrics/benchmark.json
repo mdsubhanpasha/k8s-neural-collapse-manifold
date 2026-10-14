@@ -3,13 +3,17 @@
   "ai_fixed": 38,
   "success_rate": "76%",
   "avg_ai_time_sec": 22,
+  "avg_human_time_sec": 246,
   "avg_human_time_hours": 4.1,
   "speedup": "654x",
   "breakdown": {
-    "OOMKilled": "13/15",
-    "Karpenter": "11/15",
-    "CrashLoopBackOff": "8/10",
-    "FailedScheduling": "6/10"
+    "OOMKilled": "13/15 fixed",
+    "Karpenter": "11/15 fixed",
+    "CrashLoopBackOff": "8/10 fixed",
+    "FailedScheduling": "6/10 fixed"
   },
-  "manifold": "4D visualization in figures/4d_manifold.png"
+  "manifold": "4D: Complexity x AI_time x Human_time x SuccessRate",
+  "model": "claude-3.5-sonnet + k8s-tools",
+  "inspired_by": "DeepMind Polaris",
+  "repo": "https://github.com/mdsubhanpasha/k8s-neural-collapse-manifold"
 }
